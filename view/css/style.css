@@ -12,7 +12,7 @@ header{
   float:left;
   max-width:1024px;
   min-width:480px;
-  clear:both;
+  
 }
 
 #logo{
@@ -27,6 +27,7 @@ header{
   margin-top:0px;
   text-align:right;
   background-color:lightblue;
+  padding-right:5px; 
 }
 
 .headerlink{
@@ -39,6 +40,7 @@ nav{float: left;
   width: 1024px;
   height: auto;
   padding-bottom: 15px;
+  
 }
 
 ul{
@@ -74,7 +76,10 @@ li a:hover {
 #cssmenu{}
 
 /*end of menu*/
-
+#main{
+  width:100%;
+  height:auto;
+}
 /*aside*/
 aside{
   float: right;
@@ -89,4 +94,16 @@ article{
   width: 724px;
   text-align: justify;
   background-color: lightgreen;
+}
+
+footer{
+clear:both;
+background-color:purple;}
+
+#welcome p {
+ padding-left:5px;
+ padding-right:10px;
+}
+welcome span {
+text-align:center;
 }
