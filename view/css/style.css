@@ -1,17 +1,17 @@
 /* CSS Document */
-#vsetko{
+#all{
   max-width:1024px;
   min-width:480px;
   margin:auto;
   text-align:left;
 }
 
-/*hlavicka-header*/
+/*header*/
 
 header{
   float:left;
-  max-width:1024px;
-  min-width:480px;
+  width:100%;
+  background-color:#ddd;                   /* do something with this color! */
   
 }
 
@@ -22,16 +22,16 @@ header{
 
 #links{
   float:right;
-  width:780px;
+  width: 700px;
   height:185px;
   margin-top:0px;
   text-align:right;
-  background-color:lightblue;
   padding-right:5px; 
 }
 
-.headerlink{
-
+#links .button{                                   /*heeeeeere fix the buttonssss*/
+  padding: 10px 27px;
+  font-size: 16px;  
 }
                                                                            
 /*menu*/
@@ -48,7 +48,7 @@ ul{
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #f3f3f3;
+  background-color: #ccc;
   border: 1px solid #e7e7e7;
 }
 
@@ -58,34 +58,37 @@ li {
 
 li a {
     display: block;
-    color: #666;
+    color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 
 li a:hover {
-    background-color: #ddd;
+    background-color: #999;
 }
 
 .active {
-  background-color: #4CAF50;
-  color: white;
+  background-color: #990099;
 }
 
 #cssmenu{}
 
 /*end of menu*/
+h1{text-align: center;}
+
 #main{
-  width:100%;
-  height:auto;
+  min-height:400px;
+  background-color: #ddd;               /* do something with this color! */
 }
 /*aside*/
 aside{
   float: right;
   width: 280px;
-  padding-right:20px;
-  background-color:lightyellow;
+  padding:20px;                                 /*check the padding and sizes and so on...*/ 
+  background-color: #f3f3f3;
+  border: solid #ccc 1px;
+  text-align: justify;
 }
 
 /*article*/
@@ -93,17 +96,42 @@ article{
   float: both;
   width: 724px;
   text-align: justify;
-  background-color: lightgreen;
+  background-color: #f3f3f3;
 }
 
-footer{
-clear:both;
-background-color:purple;}
 
+/*footer*/
+footer{
+  clear:both;
+  background-color: #990099;
+}
+
+
+/*text styling*/
 #welcome p {
  padding-left:5px;
  padding-right:10px;
+ text-align: center;                                   /*justify????*/ 
 }
-welcome span {
-text-align:center;
+
+
+
+
+
+
+
+
+
+
+.button{
+  background-color: #990099;                                   /* looook at the buttons!!!! */
+    border: none;
+    color: white;
+    padding: 10px 27px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
 }
