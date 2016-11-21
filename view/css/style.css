@@ -1,7 +1,10 @@
 /* CSS Document */
-#all{
-  max-width:1024px;
-  min-width:480px;
+body{
+  margin: 0 auto;
+}
+
+.wrapper{
+  width:900px;
   margin:auto;
   text-align:left;
 }
@@ -12,7 +15,7 @@ header{
   float:left;
   width:100%;
   background-color:#ddd;                   /* do something with this color! */
-  
+  min-height: 253px;
 }
 
 #logo{
@@ -22,7 +25,7 @@ header{
 
 #links{
   float:right;
-  width: 700px;
+  width: 600px;
   height:185px;
   margin-top:0px;
   text-align:right;
@@ -37,9 +40,10 @@ header{
 /*menu*/
 
 nav{float: left;
-  width: 1024px;
+  width: 100%;
   height: auto;
   padding-bottom: 15px;
+  text-align: center;
   
 }
 
@@ -54,6 +58,7 @@ ul{
 
 li {
   float: left;
+  padding-right:20px;
 }
 
 li a {
@@ -65,27 +70,32 @@ li a {
 }
 
 li a:hover {
-    background-color: #999;
+  background-color: #999;
 }
 
 .active {
   background-color: #990099;
 }
 
-#cssmenu{}
+
 
 /*end of menu*/
+
 h1{text-align: center;}
 
 #main{
-  min-height:400px;
-  background-color: #ddd;               /* do something with this color! */
+  width:96%;
+  padding: 2%;
+  float:left;
+  background-color: #ddd;
+  min-height: 300px;               /* do something with this color! */
 }
+
 /*aside*/
 aside{
   float: right;
-  width: 280px;
-  padding:20px;                                 /*check the padding and sizes and so on...*/ 
+  width: 180px;
+  margin-left:15px;                                 /*check the padding and sizes and so on...*/ 
   background-color: #f3f3f3;
   border: solid #ccc 1px;
   text-align: justify;
@@ -93,16 +103,19 @@ aside{
 
 /*article*/
 article{
-  float: both;
-  width: 724px;
+  float: left;
+  width: 650px;
   text-align: justify;
   background-color: #f3f3f3;
+  border: solid #ccc 1px;
 }
+
 
 
 /*footer*/
 footer{
   clear:both;
+  width:900px;
   background-color: #990099;
 }
 
