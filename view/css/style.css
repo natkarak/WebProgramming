@@ -1,10 +1,12 @@
 /* CSS Document */
 body{
   margin: 0 auto;
+  max-width:1040px;
+  min-width:300px;
 }
 
 .wrapper{
-  width:900px;
+  width:100%;
   margin:auto;
   text-align:left;
 }
@@ -14,22 +16,23 @@ body{
 header{
   float:left;
   width:100%;
-  background-color:#ddd;                   /* do something with this color! */
-  min-height: 253px;
+  height: 180px;
+  padding:10px 0 10px 0;
+  background-color:#ddd;                   /* do something with this color! */  
 }
 
-#logo{
+header img{
   float:left;
+  max-width:100%;
+  height:auto;
   margin:10px;
 }
 
 #links{
   float:right;
-  width: 600px;
-  height:185px;
-  margin-top:0px;
+  width: auto;
   text-align:right;
-  padding-right:5px; 
+  margin:0 10px; 
 }
 
 #links .button{                                   /*heeeeeere fix the buttonssss*/
@@ -39,29 +42,29 @@ header{
                                                                            
 /*menu*/
 
-nav{float: left;
+nav{
+  float: left;
   width: 100%;
   height: auto;
-  padding-bottom: 15px;
   text-align: center;
-  
 }
 
-ul{
+ul.cssmenu{
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   background-color: #ccc;
   border: 1px solid #e7e7e7;
+  
 }
 
-li {
+ul.cssmenu li {
   float: left;
-  padding-right:20px;
+  padding-right:0;
 }
 
-li a {
+ul.cssmenu li a {
     display: block;
     color: white;
     text-align: center;
@@ -69,11 +72,11 @@ li a {
     text-decoration: none;
 }
 
-li a:hover {
+ul.cssmenu li a:hover {
   background-color: #999;
 }
 
-.active {
+ul.cssmenu .active {
   background-color: #990099;
 }
 
@@ -81,12 +84,12 @@ li a:hover {
 
 /*end of menu*/
 
-h1{text-align: center;}
+
 
 #main{
+  float:left;
   width:96%;
   padding: 2%;
-  float:left;
   background-color: #ddd;
   min-height: 300px;               /* do something with this color! */
 }
@@ -95,7 +98,8 @@ h1{text-align: center;}
 aside{
   float: right;
   width: 180px;
-  margin-left:15px;                                 /*check the padding and sizes and so on...*/ 
+  height:auto;
+  padding:10px;
   background-color: #f3f3f3;
   border: solid #ccc 1px;
   text-align: justify;
@@ -103,8 +107,9 @@ aside{
 
 /*article*/
 article{
-  float: left;
-  width: 650px;
+  width: auto;
+  padding: 2%;
+  margin-right:210px;
   text-align: justify;
   background-color: #f3f3f3;
   border: solid #ccc 1px;
@@ -115,12 +120,14 @@ article{
 /*footer*/
 footer{
   clear:both;
-  width:900px;
+  width:100%;
   background-color: #990099;
 }
 
 
 /*text styling*/
+h1{text-align: center;}
+
 #welcome p {
  padding-left:5px;
  padding-right:10px;
@@ -147,4 +154,35 @@ footer{
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+}
+
+
+/*responsive- smaller screens*/
+
+@media screen and (max-width:786px){  
+  header{
+    height:140px;
+  }
+  header img{
+    width:200px;
+  }
+  aside{
+    display:none;
+  }                              /* wefdfddddddddd figure out font sizes and so on...*/
+  article{
+    margin-right:0; 
+  }
+}
+
+@media screen and (max-width:545px){
+  header{
+    height:100px;
+  }
+  header img{
+    width:150px;
+  }
+  ul.cssmenu li{
+  float:none;
+  } 
+  
 }
