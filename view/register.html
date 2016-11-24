@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <title>Genovefa's library</title>
@@ -34,8 +34,40 @@
             <li class='last'><a href="search.html"><span>Search</span></a></li>
             <li class='last'><a href="statistics.html"><span>Statistics</span></a> </li>
           </ul>  
-      </nav> 
+      </nav>
       
+      <!-- content -->
+      <div class="main">
+ <!--   <aside>
+        </aside>     -->
+        
+        <article>
+          <h1>Registration</h1>
+          It is fast and free. <br />
+          
+          <form method = "post" action = "">
+
+          <p><label>First Name: * <input name = "name" type = "text" placeholder = "First Name" required size = "25"></label></p>
+          <p><label>Last Name: * <input name = "name" type = "text" placeholder = "Last Name" required size = "25"></label></p>
+          <p><label>E-mail: * <input name = "email" type = "email" placeholder = "name@domain.com" required size = "25"></label></p>
+          <p><label>Phone number: <input name = "phone_number" type = "tel" placeholder = "(###) ###-####" pattern = "\(\d{3}\) +\d{3}-\d{4}" size = "25"></label></p>
+          <p><label>Password: * <input name = "password" type = "password" required size = "25"></label></p>
+          <p><label>Confirm password: * <input name = "confirm_password" required type = "password" size = "25"></label></p>
+          <p>
+            <input type = "submit" value = "Submit" />
+            <input type = "reset" value = "Clear" />
+          </p>
+          
+          </form>
+          
+          The fields with * are required.
+        
+        </article>
+      </div>
       
+      <!-- footer -->
+      <footer>  <p>Copyright ©Natália Rakovská 2016</p> </footer> 
+    
+    </div>
   </body>
 </html>

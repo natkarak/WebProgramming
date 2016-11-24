@@ -37,7 +37,7 @@ header img{
 
 #links .button{                                   /*heeeeeere fix the buttonssss*/
   padding: 10px 27px;
-  font-size: 16px;  
+  font-size: 16px;    
 }
                                                                            
 /*menu*/
@@ -86,13 +86,20 @@ ul.cssmenu .active {
 
 
 
-#main{
+.main{
   float:left;
   width:96%;
   padding: 2%;
   background-color: #ddd;
-  min-height: 300px;               /* do something with this color! */
+  min-height: 300px;
+  display:flex;
+  flex-flow: row-reverse wrap;                /* do something with this color! */
 }
+
+.main article{
+flex:2.5;}
+.main aside{
+flex:1;}  
 
 /*aside*/
 aside{
@@ -109,7 +116,7 @@ aside{
 article{
   width: auto;
   padding: 2%;
-  margin-right:210px;
+  margin-right:20px;
   text-align: justify;
   background-color: #f3f3f3;
   border: solid #ccc 1px;
@@ -166,11 +173,9 @@ h1{text-align: center;}
   header img{
     width:200px;
   }
-  aside{
-    display:none;
-  }                              /* wefdfddddddddd figure out font sizes and so on...*/
+                            /* wefdfddddddddd figure out font sizes and so on...*/
   article{
-    margin-right:0; 
+    margin-right:10px; 
   }
 }
 
@@ -184,5 +189,7 @@ h1{text-align: center;}
   ul.cssmenu li{
   float:none;
   } 
-  
+  aside{
+    display:none;
+  }  
 }
