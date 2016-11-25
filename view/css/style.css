@@ -31,13 +31,8 @@ header img{
 #links{
   float:right;
   width: auto;
-  text-align:right;
-  margin:0 10px; 
-}
-
-#links .button{                                   /*heeeeeere fix the buttonssss*/
-  padding: 10px 27px;
-  font-size: 16px;    
+  margin:0 10px;
+  text-align:right; 
 }
                                                                            
 /*menu*/
@@ -53,10 +48,9 @@ ul.cssmenu{
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
   background-color: #ccc;
   border: 1px solid #e7e7e7;
-  
+  overflow: hidden;
 }
 
 ul.cssmenu li {
@@ -65,10 +59,10 @@ ul.cssmenu li {
 }
 
 ul.cssmenu li a {
+    padding: 14px 16px;
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
 }
 
@@ -80,8 +74,6 @@ ul.cssmenu .active {
   background-color: #990099;
 }
 
-
-
 /*end of menu*/
 
 
@@ -89,26 +81,27 @@ ul.cssmenu .active {
 .main{
   float:left;
   width:96%;
+  min-height: 300px;
   padding: 2%;
   background-color: #ddd;
-  min-height: 300px;
   display:flex;
   flex-flow: row-reverse wrap;                /* do something with this color! */
 }
 
 .main article{
-flex:2.5;}
+  flex:2.5;}
 .main aside{
-flex:1;}  
+  flex:1;}  
 
 /*aside*/
 aside{
   float: right;
   width: 180px;
-  height:auto;
-  padding:10px;
+  height: auto;
+  padding: 10px;
   background-color: #f3f3f3;
   border: solid #ccc 1px;
+  border-radius: 4px;
   text-align: justify;
 }
 
@@ -116,10 +109,11 @@ aside{
 article{
   width: auto;
   padding: 2%;
-  margin-right:20px;
-  text-align: justify;
+  margin-right: 20px;
   background-color: #f3f3f3;
   border: solid #ccc 1px;
+  border-radius: 4px;
+  text-align: justify;
 }
 
 
@@ -141,28 +135,66 @@ h1{text-align: center;}
  text-align: center;                                   /*justify????*/ 
 }
 
+#registration{
+  text-align:center;}
 
-
-
-
-
-
-
-
-
-.button{
-  background-color: #990099;                                   /* looook at the buttons!!!! */
-    border: none;
-    color: white;
-    padding: 10px 27px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
+#registration form{
+  padding-right:35%;
+  text-align:right;
 }
 
+
+
+
+
+
+/*buttons styling*/
+
+.button{
+  padding: 10px 27px;
+  margin: 4px 2px;  
+  background-color: #990099;                                   /* looook at the buttons!!!! */
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius:6px;
+}
+
+#links .button{                                   /*heeeeeere fix the buttonssss*/
+  padding: 10px 27px;
+  font-size: 16px;    
+}
+
+
+/* input styling*/
+input [type=button], input[type=submit], input[type=reset]{
+  padding: 5px 13px;
+  margin: 4px 2px;
+  background-color: #990099;                                   /* looook at the buttons!!!! */
+  border: none;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius:4px;
+}
+
+aside input[type="search"]{
+  width: 100%;
+  padding: 12px 20px 12px 40px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url(searchicon.png);
+  background-position: left center; 
+  background-repeat: no-repeat;
+  
+}
 
 /*responsive- smaller screens*/
 
