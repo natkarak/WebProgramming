@@ -28,7 +28,7 @@ header img{
   margin:10px;
 }
 
-#links{
+.headerLeft{
   float:right;
   width: auto;
   margin:0 10px;
@@ -74,14 +74,11 @@ ul.cssmenu .active {
   background-color: #990099;
 }
 
-/*end of menu*/
-
-
-
+/* main */
 .main{
   float:left;
   width:96%;
-  min-height: 300px;
+  min-height: 350px;
   padding: 2%;
   background-color: #ddd;
   display:flex;
@@ -89,7 +86,7 @@ ul.cssmenu .active {
 }
 
 .main article{
-  flex:2.5;}
+  flex:2.5; }
 .main aside{
   flex:1;}  
 
@@ -127,7 +124,12 @@ footer{
 
 
 /*text styling*/
-h1{text-align: center;}
+h1, h2, h3{text-align: center;}
+
+aside span{
+  font-weight: bold;
+  font-size: 20px;
+}
 
 #welcome p {
  padding-left:5px;
@@ -141,6 +143,11 @@ h1{text-align: center;}
 #registration form{
   padding-right:35%;
   text-align:right;
+}
+
+#search form{
+  text-align: right;
+  margin-right: 30%;
 }
 
 
@@ -158,15 +165,69 @@ h1{text-align: center;}
   color: white;
   text-align: center;
   text-decoration: none;
+  font-family: "Times New Roman";
   display: inline-block;
   font-size: 16px;
   cursor: pointer;
   border-radius:6px;
 }
 
-#links .button{                                   /*heeeeeere fix the buttonssss*/
+.headerLeft .button{                                   /*heeeeeere fix the buttonssss*/
   padding: 10px 27px;
-  font-size: 16px;    
+  font-size: 16px;
+  font-family: "Times New Roman";    
+}
+
+button{
+  padding: 10px 27px;
+  margin: 4px 2px;  
+  background-color: #990099;                                   /* looook at the buttons!!!! */
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Times New Roman";
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius:6px;  
+}
+button #loginBtn{
+  padding: 5px 13px;
+  border-radius:4px;  
+}
+
+/* dashboard accordion */
+button.accordion{
+  width: 100%;
+  padding: 18px;
+  background-color: #ccc;
+  border: 1px solid #e7e7e7;
+  color: white;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;                          
+  transition: 0.4s;  
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: #990099; 
+}
+
+div.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    max-height: 0px;
+    overflow: hidden;
+    opacity:0;
+}
+
+div.panel.show {
+  /*  display: block;  */
+  opacity: 1;
+  max-height: 500px;
 }
 
 

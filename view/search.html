@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="css/style.css" media="all">
+    <script type="text/javascript" src="javascript/js.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -18,20 +19,28 @@
       <!-- header -->
       <header>
           
-            <img src="img/logo_medium.png" alt="Logo of the company">
+          <img src="img/logo_medium.png" alt="Logo of the company">
           
-          <div id="links">
+          <div class="headerLeft">
             <a href="register.html" class="button"> Register </a>
-            <a href="login.html" class="button"> Login </a>
+            <button onclick="showLogin()">Login</button>
+            
+              <div id="loginSection">
+                <form method = "post" action = "">   
+                  <p><label>Username: <input name = "username" type = "text" placeholder = "Username" size = "25" required></label></p>
+                  <p><label>Password: <input name = "password" type = "password" size = "25" required></label></p>
+                  <p><button type = "submit" id="loginBtn">Login</button></p>
+                </form>   
+              </div>
           </div>      
       </header>
       
       <!-- navigation -->
       <nav>                                        
           <ul class="cssmenu">
-            <li class='last'><a href="index.html"><span>Home</span></a></li>
-            <li class='last'><a href="dashboard.html"><span>Dashboard</span></a></li>           
+            <li class='last'><a href="index.html"><span>Home</span></a></li>           
             <li class='active'><a href="search.html"><span>Search</span></a></li>
+            <li class='last'><a href="dashboard.html"><span>Dashboard</span></a></li>
             <li class='last'><a href="statistics.html"><span>Statistics</span></a> </li>
           </ul>  
       </nav>
@@ -40,21 +49,26 @@
       <div class="main">
         <aside>
           <p>
-            Latest additions in our library:
+            Are you looking for some of these all time best selling books?
           </p>
+          <p>1. <span>Don Quixote </span><br />(500 million copies sold) <br />by Miguel de Cervantes</p>
+          <p>2. <span>A Tale of Two Cities </span><br />(200 million copies sold) <br />by Charles Dickens</p>
+          <p>3. <span>The Lord of the Rings </span><br />(150 million copies sold) <br />by J.R.R. Tolkien</p>
         </aside>
         
         <article>
-          <h1>Advanced search</h1>
-            <form>    
-              <p><label>Title: <input name = "title" type = "text" placeholder = "Title" required size = "25"></label></p>
-              <p><label>Author: <input name = "author" type = "text" placeholder = "Author" required size = "25"></label></p>
-              <p><label>Publication year: <input type = "number" min = "1950" max = "2050" step = "1"></label> (Our oldest book is from the year 1950.)</p>
-              <p><label>Publisher: <input name = "publisher:" type = "text" placeholder = "Publisher" required size = "25"></label></p>
+          <div id="search">
+            <h1>Advanced search</h1>
+              <form method="post" action="searchResult.html">    
               
+                <p><label>Title: <input name = "title" type = "text" placeholder = "Title" size = "25"></label></p>
+                <p><label>Author: <input name = "author" type = "text" placeholder = "Author" size = "25"></label></p>
+                <p><label>Publication year: <input type = "number" min = "1950" max = "2050" step = "1"></label></p> <p>(Our oldest book is from the year 1950.)</p>
+                <p><label>Publisher: <input name = "publisher:" type = "text" placeholder = "Publisher" size = "25"></label></p>
+                <p><input type = "submit" value = "Search!" /></p>
               
-              
-            </form>    
+              </form>    
+          </div>
         </article>
       </div>
       

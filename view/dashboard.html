@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="css/style.css" media="all">
+    <script type="text/javascript" src="javascript/js.js"></script> 
   </head>
   <body>
     <div class="wrapper">
@@ -18,20 +19,24 @@
       <!-- header -->
       <header>
           
-            <img src="img/logo_medium.png" alt="Logo of the company">
-          
-          <div id="links">
+          <img src="img/logo_medium.png" alt="Logo of the company">
+          <div class="headerLeft">
+            <p>You are logged in as <span>Username</span>.</p>
+          </div>
+         <!-- 
+          <div class="headerLeft">
             <a href="register.html" class="button"> Register </a>
             <a href="login.html" class="button"> Login </a>
-          </div>      
+          </div>
+          -->       
       </header>
       
       <!-- navigation -->
       <nav>                                        
           <ul class="cssmenu">
-            <li class='last'><a href="index.html"><span>Home</span></a></li>
-            <li class='active'><a href="dashboard.html"><span>Dashboard</span></a></li>           
+            <li class='last'><a href="index.html"><span>Home</span></a></li>           
             <li class='last'><a href="search.html"><span>Search</span></a></li>
+            <li class='active'><a href="dashboard.html"><span>Dashboard</span></a></li>
             <li class='last'><a href="statistics.html"><span>Statistics</span></a> </li>
           </ul>  
       </nav>
@@ -43,16 +48,34 @@
             <input type="search" name="search" placeholder="Search...">
           </form>
           <p>
-            Latest additions in our library:
+            Are you looking for some of these all time best selling books?
           </p>
+          <p>1. <span>Don Quixote </span><br />(500 million copies sold) <br />by Miguel de Cervantes</p>
+          <p>2. <span>A Tale of Two Cities </span><br />(200 million copies sold) <br />by Charles Dickens</p>
+          <p>3. <span>The Lord of the Rings </span><br />(150 million copies sold) <br />by J.R.R. Tolkien</p>
         </aside>
         
         <article>
          <div id="dashboard">
           <h1>Dashboard</h1>
-          Currently borrowed books:
-          History of rentals:
-          Personal info:
+          <h2>Logged in as Username</h2>
+            
+            <button class="accordion">Currently borrowed books:</button>
+              <div class="panel">
+                <p>afedfvdfvsdfbvsfdbsafvbbv</p>
+              </div>              
+            
+            <button class="accordion">History of rentals:</button>
+              <div class="panel">
+                <p>afedfvdfvsdfbvsfdbsafvbbv</p>
+              </div>
+            
+            <button class="accordion">Personal info:</button>
+              <div class="panel">
+                <p>afedfvdfvsdfbvsfdbsafvbbv</p>
+              </div>  
+          
+          
          </div> 
         </article>
       </div>
