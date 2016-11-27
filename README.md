@@ -22,16 +22,21 @@ As for the tagret devices: are a computer and a mobile phone (to help the user c
 ######Issues concerning different browsers
 The web application was built referencing Google Chrome.
 One of the issues is the video plugin on the homepage. 
-This plugin does not work very well on Mozila Firefox - it is not getting smaller when the window is being shrunk (not just the element, but it prevents whole aside part from becoming smaller), therefor the responsivity is slightly worse here.
+This plugin does not work very well on Mozila Firefox - it is not getting smaller when the window is being shrunk (not just the element, but it prevents whole aside part from becoming smaller), therefore the responsivity is slightly worse here.
 But it was tested also on the Microsoft Edge and Google Chrome - on these two there is no problem with it.
 
 Other than that no significat differences and issues were find in comparison of the web browsers.
 
 ######Problems to solve and comments
 Things that need to be solved: 
--how will the statistics work
--how to give permission to some things only to the administrator
--sending of the forms
+-how will the statistics work,
+-how to give permission to some things only to the administrator,
+-sending of the forms,
+
+I have put a lot of effort to create the main page- to make it look somewhat representative 
+(in case of showing it to someone that does not know it is for a school project might think about signinup), 
+but also because this is the page where I was testing and fixing majority of the components of the page.
+The second one I would say the fact of how the page works on different screen sizes.
 
 
 *Author:
