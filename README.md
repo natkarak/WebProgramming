@@ -29,9 +29,14 @@ Other than that no significat differences and issues were find in comparison of 
 
 ######Problems to solve and comments
 Things that need to be solved: 
--how will the statistics work
--how to give permission to some things only to the administrator
--sending of the forms
+-how will the statistics work,
+-how to give permission to some things only to the administrator,
+-sending of the forms,
+
+I have put a lot of effort to create the main page- to make it look somewhat representative 
+(in case of showing it to someone that does not know it is for a school project might think about signinup), 
+but also because this is the page where I was testing and fixing majority of the components of the page.
+The second one I would say the fact of how the page works on different screen sizes.
 
 
 *Author:
