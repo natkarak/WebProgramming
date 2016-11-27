@@ -3,8 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Genovefa's library</title>
-    
-    <link rel="shortcut icon" href="" >
+
     <meta name="author" content="Natáia Rakovská" lang="sk">
     <meta name="keywords" content="book, library, online library">
     <meta name="description" content="Online library, so no book is forgetten">
@@ -18,24 +17,39 @@
       <!-- header -->
       <header>
           
-            <img src="img/logo_medium.png" alt="Logo of the company">
-         <!-- 
+          <img src="img/logo_medium.png" alt="Logo of the company">
+          
           <div class="headerLeft">
-            <a href="register.html" class="button"> Register </a>
-            <a href="login.html" class="button"> Login </a>
-          </div>
-          -->      
+            <button onclick="document.getElementById('logSec').style.display='block'">Login</button>
+            
+              <div id="logSec" class="modal">
+                <form class="modal-content animate" action="action_page.php">
+                  <div class="container">   
+                    <p><label>Username:  </label></p>
+                    <input name = "username" type = "text" placeholder = "Enter username" size = "25" required>
+                    <p><label>Password: </label></p>
+                    <input name = "password" type = "password" placeholder = "Enter password" size = "25" required>
+                    <p><button type = "submit" id="loginBtn">Login</button></p>
+                  </div>
+                  
+                  <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('logSec').style.display='none'" class="cancelbtn">Cancel</button>
+                    <span class="psw">Forgot <a href="#">password?</a></span>
+                  </div>  
+                </form>   
+              </div>
+          </div>      
       </header>
-      
       <!-- navigation -->
       <nav>                                        
-          <ul class="cssmenu">
+          <ul class="topnav" id="myTopnav">
             <li class='last'><a href="index.html"><span>Home</span></a></li>           
             <li class='last'><a href="search.html"><span>Search</span></a></li>
             <li class='last'><a href="dashboard.html"><span>Dashboard</span></a></li>
             <li class='last'><a href="statistics.html"><span>Statistics</span></a> </li>
+            <li class="icon"><a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a></li>
           </ul>  
-      </nav>
+      </nav> 
       
       <!-- content -->
       <div class="main">
@@ -44,12 +58,12 @@
         
         <article>
          
-         <div id="registration"> 
+         <div class="registration"> 
           <h1>Registration</h1>
           <p> It is fast and free. </p>
           The fields with * are required.
           
-          <form method = "post" action = "">
+          <form method = "post">
 
           <p><label>First Name: * <input name = "name" type = "text" placeholder = "First Name" required size = "25"></label></p>
           <p><label>Last Name: * <input name = "name" type = "text" placeholder = "Last Name" required size = "25"></label></p>
