@@ -32,6 +32,7 @@ Things that need to be solved:
 -how will the statistics work,
 -how to give permission to some things only to the administrator,
 -sending of the forms,
+-accordion on dashboard still does not work.
 
 I have put a lot of effort to create the main page- to make it look somewhat representative 
 (in case of showing it to someone that does not know it is for a school project might think about signinup), 
