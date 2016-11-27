@@ -1,4 +1,4 @@
-Library
+﻿Library
 ==========
 ### Web Programming project, winter semester 2016
 
@@ -14,6 +14,25 @@ Genovefa's friends could enable search in the database of books and review statu
 The app also offers to display various statistics (who borrows a book often, who currently has the most borrowed books, ...).
 
 The application should be written in a way that will allow the rental of other things (eg. CDs, tools, ...)
+
+#####Target audience and devices
+Target audience of this web application includes everybody that loves to read book (in the paper form) and does not mind using computer to keep track of his/hers borrowed books.
+As for the tagret devices: are a computer and a mobile phone (to help the user controlling his books even on the road) and for completness is added also a tablet version.
+
+######Issues concerning different browsers
+The web application was built referencing Google Chrome.
+One of the issues is the video plugin on the homepage. 
+This plugin does not work very well on Mozila Firefox - it is not getting smaller when the window is being shrunk (not just the element, but it prevents whole aside part from becoming smaller), therefor the responsivity is slightly worse here.
+But it was tested also on the Microsoft Edge and Google Chrome - on these two there is no problem with it.
+
+Other than that no significat differences and issues were find in comparison of the web browsers.
+
+######Problems to solve and comments
+Things that need to be solved: 
+-how will the statistics work
+-how to give permission to some things only to the administrator
+-sending of the forms
+
 
 *Author:
 Natália Rakovská, 23.10.2016
