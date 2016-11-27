@@ -3,8 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Genovefa's library</title>
-    
-    <link rel="shortcut icon" href="" >
+     
     <meta name="author" content="Natáia Rakovská" lang="sk">
     <meta name="keywords" content="book, library, online library">
     <meta name="description" content="Online library, so no book is forgetten">
@@ -23,27 +22,36 @@
           
           <div class="headerLeft">
             <a href="register.html" class="button"> Register </a>
-            <button onclick="showLogin()">Login</button>
+            <button onclick="document.getElementById('logSec').style.display='block'">Login</button>
             
-              <div id="loginSection">
-                <form method = "post" action = "">   
-                  <p><label>Username: <input name = "username" type = "text" placeholder = "Username" size = "25" required></label></p>
-                  <p><label>Password: <input name = "password" type = "password" size = "25" required></label></p>
-                  <p><button type = "submit" id="loginBtn">Login</button></p>
+              <div id="logSec" class="modal">
+                <form class="modal-content animate" action="action_page.php">
+                  <div class="container">   
+                    <p><label>Username:  </label></p>
+                    <input name = "username" type = "text" placeholder = "Enter username" size = "25" required>
+                    <p><label>Password: </label></p>
+                    <input name = "password" type = "password" placeholder = "Enter password" size = "25" required>
+                    <p><button type = "submit" id="loginBtn">Login</button></p>
+                  </div>
+                  
+                  <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('logSec').style.display='none'" class="cancelbtn">Cancel</button>
+                    <span class="psw">Forgot <a href="#">password?</a></span>
+                  </div>  
                 </form>   
               </div>
           </div>      
       </header>
-      
       <!-- navigation -->
       <nav>                                        
-          <ul class="cssmenu">
+          <ul class="topnav" id="myTopnav">
             <li class='last'><a href="index.html"><span>Home</span></a></li>           
-            <li class='active'><a href="search.html"><span>Search</span></a></li>
+            <li class='last'><a href="search.html"><span>Search</span></a></li>
             <li class='last'><a href="dashboard.html"><span>Dashboard</span></a></li>
             <li class='last'><a href="statistics.html"><span>Statistics</span></a> </li>
+            <li class="icon"><a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a></li>
           </ul>  
-      </nav>
+      </nav> 
       
       <!-- content -->
       <div class="main">
@@ -57,7 +65,11 @@
         </aside>
         
         <article>
-          <p>We are sorry! The book you are looking for was not found.</p>
+          
+          <h1>Your search results </h1>  
+           
+            <p>We are sorry! The book you are looking for was not found.</p>
+        
         </article>
       </div>
       

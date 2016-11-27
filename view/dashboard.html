@@ -3,8 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Genovefa's library</title>
-    
-    <link rel="shortcut icon" href="" >
+
     <meta name="author" content="Natáia Rakovská" lang="sk">
     <meta name="keywords" content="book, library, online library">
     <meta name="description" content="Online library, so no book is forgetten">
@@ -18,28 +17,23 @@
       
       <!-- header -->
       <header>
-          
           <img src="img/logo_medium.png" alt="Logo of the company">
           <div class="headerLeft">
             <p>You are logged in as <span>Username</span>.</p>
-          </div>
-         <!-- 
-          <div class="headerLeft">
-            <a href="register.html" class="button"> Register </a>
-            <a href="login.html" class="button"> Login </a>
-          </div>
-          -->       
+            <a href="index.html" class="button"> Logout </a>
+          </div>               
       </header>
       
       <!-- navigation -->
       <nav>                                        
-          <ul class="cssmenu">
+          <ul class="topnav" id="myTopnav">
             <li class='last'><a href="index.html"><span>Home</span></a></li>           
             <li class='last'><a href="search.html"><span>Search</span></a></li>
             <li class='active'><a href="dashboard.html"><span>Dashboard</span></a></li>
             <li class='last'><a href="statistics.html"><span>Statistics</span></a> </li>
+            <li class="icon"><a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a></li>
           </ul>  
-      </nav>
+      </nav> 
       
       <!-- content -->
       <div class="main">
@@ -56,25 +50,66 @@
         </aside>
         
         <article>
-         <div id="dashboard">
+         <div class="dashboard">
           <h1>Dashboard</h1>
           <h2>Logged in as Username</h2>
             
             <button class="accordion">Currently borrowed books:</button>
               <div class="panel">
-                <p>afedfvdfvsdfbvsfdbsafvbbv</p>
+                <table style="width:100%">
+                  <tr>
+                    <th>Title</th>
+                    <th>Borrowed from</th> 
+                    <th>Borrowed till</th>
+                  </tr>
+                  <tr>
+                    <td>Little prince</td>
+                    <td>1.11.2016</td>
+                    <td>1.12.2016</td>
+                  </tr>
+                  <tr>
+                    <td>Catcher in the rye</td>
+                    <td>2.11.2016</td>
+                    <td>2.12.2016</td>
+                  </tr>
+                  <tr>
+                    <td>Great Gatsby</td>
+                    <td>3.11.2016</td>
+                    <td>3.12.2016</td>
+                  </tr>
+                </table>
               </div>              
             
             <button class="accordion">History of rentals:</button>
               <div class="panel">
-                <p>afedfvdfvsdfbvsfdbsafvbbv</p>
+                <p>You are off to a good start, but you have no history of rentals in our library.</p>
               </div>
             
             <button class="accordion">Personal info:</button>
               <div class="panel">
-                <p>afedfvdfvsdfbvsfdbsafvbbv</p>
+                <table style="width:100%">
+                  <tr>
+                    <th>First name</th>
+                    <th>Last name</th> 
+                    <th>Borrowed till</th>
+                  </tr>
+                  <tr>
+                    <td>Little prince</td>
+                    <td>1.11.2016</td>
+                    <td>1.12.2016</td>
+                  </tr>
+                  <tr>
+                    <td>Catcher in the rye</td>
+                    <td>2.11.2016</td>
+                    <td>2.12.2016</td>
+                  </tr>
+                  <tr>
+                    <td>Great Gatsby</td>
+                    <td>3.11.2016</td>
+                    <td>3.12.2016</td>
+                  </tr>
+                </table>
               </div>  
-          
           
          </div> 
         </article>
