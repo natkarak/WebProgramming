@@ -29,8 +29,8 @@ Other than that no significat differences and issues were find in comparison of 
 
 ######Problems to solve and comments
 Things that need to be solved: 
--how will the statistics work,
--how to give permission to some things only to the administrator,
+-how will the statistics work- canvas,
+-how to give permission to some things only to the administrator- django permissions,
 -sending of the forms,
 -accordion on dashboard still does not work.
 
