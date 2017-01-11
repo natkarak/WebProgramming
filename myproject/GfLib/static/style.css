@@ -1,0 +1,496 @@
+/* CSS Document */
+body{
+  margin: 0 auto;
+  max-width:1040px;
+  min-width:300px;
+}
+
+.wrapper{
+  width:100%;
+  margin:auto;
+  text-align:left;
+}
+
+/*header*/
+
+header{
+  float:left;
+  width:100%;
+  height: 180px;
+  padding:10px 0 10px 0;
+  background-color:#ddd;                   /* do something with this color! */  
+}
+
+header img{
+  float:left;
+  max-width:100%;
+  height:auto;
+  margin:10px;
+}
+
+.headerLeft{
+  float:right;
+  width: auto;
+  margin:0 10px;
+  text-align:right; 
+}
+                                                                           
+
+/*menu*/
+nav{
+  float: left;
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+ul.topnav{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #ccc;
+  border: 1px solid #e7e7e7;
+  overflow: hidden;
+}
+
+ul.topnav li {
+  float: left;
+  padding-right:0;
+}
+
+ul.topnav li a {
+    padding: 14px 16px;
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+ul.topnav li a:hover {
+  background-color: #999;
+}
+
+ul.topnav .active {
+  background-color: #990099;
+}
+
+ul.topnav li.icon {display: none;}
+
+/* main */
+.main{
+  float:left;
+  width:96%;
+  min-height: 350px;
+  padding: 2%;
+  background-color: #ddd;
+  display:flex;
+  flex-flow: row-reverse wrap;                
+}
+
+.main article{
+  flex:2.5; }
+.main aside{
+  flex:1;}  
+
+/*aside*/
+aside{
+  float: right;
+  width: 180px;
+  height: auto;
+  padding: 10px;
+  background-color: #f3f3f3;
+  border: solid #ccc 1px;
+  border-radius: 4px;
+  text-align: justify;
+}
+iframe{
+  max-width:100%;
+  height:auto;
+}
+
+/*article*/
+article{
+  width: auto;
+  padding: 2%;
+  margin-right: 20px;
+  background-color: #f3f3f3;
+  border: solid #ccc 1px;
+  border-radius: 4px;
+  text-align: justify;
+}
+
+
+
+/*footer*/
+footer{
+  clear:both;
+  width:100%;
+  background-color: #990099;
+}
+
+
+/*text styling*/
+h1, h2, h3{text-align: center;}
+
+aside span{
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.welcome p {
+ padding-left:5px;
+ padding-right:10px;
+ text-align: center;                                   /*justify????*/ 
+}
+
+.registration{
+  text-align:center;}
+
+.registration form{
+  padding-right:35%;
+  text-align:right;
+}
+
+.search form{
+  text-align: right;
+  margin-right: 30%;
+}
+
+.statistics{
+  text-align: left;
+}
+.statistics img{
+  margin: auto;
+  display: block;
+  width: 60%;
+}  
+
+.dashboard table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+
+
+/*buttons styling*/
+
+.button{
+  padding: 10px 27px;
+  margin: 4px 2px;  
+  background-color: #990099;                                   /* looook at the buttons!!!! */
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Times New Roman";
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius:6px;
+}
+
+.headerLeft .button{                                   /*heeeeeere fix the buttonssss*/
+  padding: 10px 27px;
+  font-size: 16px;
+  font-family: "Times New Roman";    
+}
+
+button{
+  padding: 10px 27px;
+  margin: 4px 2px;  
+  background-color: #990099;                                   
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Times New Roman";
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius:6px;  
+}
+button #loginBtn{
+  padding: 5px 13px;
+  border-radius:4px;  
+}
+
+
+/* dashboard accordion */
+button.accordion{
+  width: 100%;
+  padding: 18px;
+  background-color: #ccc;
+  border: 1px solid #e7e7e7;
+  color: white;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;                          
+  transition: 0.4s;  
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: #990099; 
+}
+
+div.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    max-height: 0px;
+    overflow: hidden;
+    opacity:0;
+}
+
+div.panel.show {
+    display: block;  
+  opacity: 1;
+  max-height: 500px;
+}
+
+
+/* input styling*/
+input [type=button], input[type=submit], input[type=reset]{
+  padding: 5px 13px;
+  margin: 4px 2px;
+  background-color: #990099;                                   
+  border: none;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius:4px;
+}
+
+aside input[type="search"]{
+  width: 100%;
+  padding: 12px 20px 12px 40px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url(searchicon.png);
+  background-position: left center; 
+  background-repeat: no-repeat;
+  
+}
+.main input[type=text], .main input[type=password], .main input[type = email], .main input[type = tel]{
+  width: auto;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+} 
+
+/*login section*/
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}     
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; 
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+/*@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+} */
+
+
+
+
+/*responsive- smaller screens*/
+
+@media screen and (max-width:786px){  
+  header{
+    height:140px;
+  }
+  header img{
+    width:200px;
+  }
+  ul.cssmenu li a {
+    padding: 10px 12px;
+    font-size:14px;
+  }
+                            
+  article{
+    margin-right:10px; 
+  }
+}
+
+@media screen and (max-width:545px){
+  header{
+    height:100px;
+  }
+  header img{
+    width:150px;
+  }
+  .headerLeft{
+    width:200px;                            
+  }
+/*  ul.topnav li{
+  float:none;
+  } 
+  ul.topnav li a {
+    padding: 8px 10px;
+    font-size:12px;
+  } */
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+  
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+  
+  aside{
+    display:none;
+  }
+  .button{
+    padding: 8px 20px;
+    margin: 4px 2px;  
+    font-size: 14px;
+    border-radius:6px;
+  }
+  
+  .headerLeft .button{                                   
+    padding: 8px 20px;
+    font-size: 14px;    
+  }
+  button{
+    padding: 8px 20px;
+    margin: 4px 2px;  
+    font-size: 14px;
+    border-radius:6px;  
+  }
+  button #loginBtn{
+  padding: 5px 13px;
+  border-radius:4px;  
+  }
+  h1{font-size:22px;}
+  h2{font-size:20px;} 
+  p{font-size:16px;}    
+}
+
+@media screen and (max-width:375px){
+  header img{
+    width:80px;
+  }
+  .headerLeft{
+    width:150px;
+  }
+  ul.cssmenu li a {
+    padding: 5px 6px;
+    font-size:12px;
+  }
+  .button{
+    padding: 8px 15px;
+    margin: 4px 2px;  
+    font-size: 12px;
+    }
+  .headerLeft .button{                                   
+    padding: 8px 15px;
+    font-size: 12px;    
+  }
+  button{
+    padding: 8px 15px;
+    margin: 4px 2px;  
+    font-size: 12px;
+    border-radius:6px;  
+  }
+  button #loginBtn{
+  padding: 3px 6px;
+  border-radius:4px;  
+  }    
+  
+  h1{font-size:20px;}
+  h2{font-size:18px;}
+  p{font-size:14px;}
+  
+   span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}

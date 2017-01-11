@@ -1,0 +1,90 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Genovefa's library</title>
+
+    <meta name="author" content="Natália Rakovská" lang="sk">
+    <meta name="keywords" content="book, library, online library">
+    <meta name="description" content="Online library, so no book is forgetten">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" type="text/css"  href="{% static 'style.css' %}" />
+    <script type="text/javascript" src="javascript/js.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      
+      <!-- header -->
+      <header>
+          
+          <img src="{% static 'images/logo_medium.png' %}" alt="Logo of the company">
+          
+          <div class="headerLeft">
+            <a href="register.html" class="button"> Register </a>
+            <button onclick="document.getElementById('logSec').style.display='block'">Login</button>
+            
+              <div id="logSec" class="modal">
+                <form class="modal-content animate" action="action_page.php">
+                  <div class="container">   
+                    <p><label>Username:  </label></p>
+                    <input name = "username" type = "text" placeholder = "Enter username" size = "25" required>
+                    <p><label>Password: </label></p>
+                    <input name = "password" type = "password" placeholder = "Enter password" size = "25" required>
+                    <p><button type = "submit" id="loginBtn">Login</button></p>
+                  </div>
+                  
+                  <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('logSec').style.display='none'" class="cancelbtn">Cancel</button>
+                    <span class="psw">Forgot <a href="#">password?</a></span>
+                  </div>  
+                </form>   
+              </div>
+          </div>      
+      </header>
+      
+      <!-- navigation -->
+      <nav>                                        
+          <ul class="topnav" id="myTopnav">
+            <li class='active'><a href="index.html"><span>Home</span></a></li>           
+            <li class='last'><a href="search.html"><span>Search</span></a></li>
+            <li class='last'><a href="dashboard.html"><span>Dashboard</span></a></li>
+            <li class='last'><a href="statistics.html"><span>Statistics</span></a> </li>
+            <li class="icon"><a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a></li>
+          </ul>  
+      </nav> 
+      
+      <!-- content -->
+      <div class="main">
+        
+        <aside>
+          <p>
+            HEEEY boooks are amazing!!! <br />
+            Music is super awesome, but not the same time as reading (it doesn't make much sense :D), or? <br />  
+            And the forever concerning question: paper/ hardcover books or the electronic books? 
+          </p>
+    <!--      <iframe src="https://www.youtube.com/embed/xqMozc4K4pg"  allowfullscreen></iframe>       -->
+        </aside>                           
+        
+        <article>
+          <div class="welcome">   
+            <h1>Welcome to Genovefa’s online library!</h1>
+                  
+            <p>This page was created to keep track of every single one of the books from Genovefa’s large and beautiful collection of books. 
+            Obviously the collection is growing every year by shelves, so it is impossible to keep track of borrowed books in paper agenda 
+            (also it is much more stylish to have a web application :D ).
+            If you would like to borrow books and see some other „library-related“ stuff, please <br>
+            <a href="register.html" class="button"> REGISTER </a> , <br> 
+            Or if you want to just check if we have your favourite book you can <a href="search.html" class="button">SEARCH</a> without registration.  </p>
+          </div> 
+        </article>
+        
+      </div>
+      
+      <!-- footer -->
+      <footer>  <p>Copyright ©Natália Rakovská 2016</p> </footer> 
+    
+    </div>
+  </body>
+</html>
