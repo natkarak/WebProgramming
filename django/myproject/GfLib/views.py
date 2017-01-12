@@ -1,7 +1,21 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+
 
 # Create your views here.
 
 def index(request):
-	return HttpResponse("Hello world. You are at the GFLib index.")
+	context = {}
+	return render(request, 'GfLib/index.html')
+
+
+def dashboard(request):
+	return render(request, 'GfLib/dashboard.html')
+
+def register(request):
+	return render(request, 'GfLib/register.html')
+
+def search(request):
+	return render(request, 'GfLib/search.html')
+
+def statistics(request):
+	return render(request, 'GfLib/statistics.html')
