@@ -10,8 +10,8 @@
     <meta name="description" content="Online library, so no book is forgetten">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" type="text/css"  href="{% static 'GfLib/style.css' %}" />
-    <script type="text/javascript" src="javascript/js.js"></script>
+   <link rel="stylesheet" type="text/css"  href="{% static 'GfLib/style.css' %}" />
+       
   </head>
   <body>
     <div class="wrapper">
@@ -20,18 +20,15 @@
       <header>
           
           <a href="/"><img src="{% static 'GfLib/images/logo_medium.png' %}" alt="Logo of the company"></a>
-      
+          <div class="headerLeft">
+
           {% if user.is_authenticated %}
-            <span class="headerLeft">You are logged in as {{ user.username }}.
+            You are logged in as {{ user.username }}.
              <a href="{% url 'logout' %}" class="button"> Logout </a>
-            </span>
+            
           {% else %}
-            <form method="POST" action="#" class="headerLeft">
-              {% csrf_token %}
-              {{ loginForm.as_table }}
-              <input type="submit" value="Login" />
-            </form>
-        {% endif %}     
+             <a href="{% url 'login' %}" class="button"> Login </a>
+          {% endif %}     
          <!--     <div id="logSec" class="modal">
                 <form class="modal-content animate" action="action_page.php">
                   <div class="container">   
@@ -65,13 +62,10 @@
       <!-- content -->
       <div class="main">
         
-                                   
-        
-        <section >
          {% block main %}
-          teeeeest
+         
          {% endblock %} 
-        </section>
+        
         
       </div>
       

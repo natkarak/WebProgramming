@@ -1,8 +1,15 @@
-{% extends "GfLib/base.html" %}
-  
-                            
+{% extends "GfLib/base.html" %}                          
         
   {% block main %}
+    <aside>
+      <p>
+      HEEEY boooks are amazing!!! <br />
+      Music is super awesome, but not the same time as reading (it doesn't make much sense :D), or? <br />  
+      And the forever concerning question: paper/ hardcover books or the electronic books? 
+      </p>
+      <iframe src="https://www.youtube.com/embed/xqMozc4K4pg"  allowfullscreen></iframe>
+    </aside>
+    <section>
           <div class="welcome">   
             <h1>Welcome to Genovefa’s online library!</h1>
                   
@@ -12,7 +19,8 @@
             If you would like to borrow books and see some other „library-related“ stuff, please <br>
             <a href={% url 'register' %} class="button"> REGISTER </a> , <br> 
             Or if you want to just check if we have your favourite book you can <a href={% url 'search' %} class="button">SEARCH</a> without registration.  </p>
-          </div> 
+          </div>
+    </section>       
   {% endblock %}
         
       

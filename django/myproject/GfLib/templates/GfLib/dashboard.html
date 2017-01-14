@@ -1,36 +1,29 @@
 {% extends "GfLib/base.html" %}
   {% block main %}
-        
-         <div class="dashboard">
-          <h1>Dashboard</h1>
-          <h2>Logged in as {{ user.username }}</h2>
-            
-            <button class="accordion">Currently borrowed books:</button>
-              <div class="panel">
-                <table>
-                  <tr>
-                    <th>Title</th>
-                    <th>Borrowed from</th> 
-                    <th>Borrowed till</th>
-                  </tr>
-                  <tr>
-                    <td>Little prince</td>
-                    <td>1.11.2016</td>
-                    <td>1.12.2016</td>
-                  </tr>
-                  <tr>
-                    <td>Catcher in the rye</td>
-                    <td>2.11.2016</td>
-                    <td>2.12.2016</td>
-                  </tr>
-                  <tr>
-                    <td>Great Gatsby</td>
-                    <td>3.11.2016</td>
-                    <td>3.12.2016</td>
-                  </tr>
-                </table>
-              </div>              
-            
+    <section> 
+      <div class="dashboard">
+        <h1>Dashboard</h1>
+          {% if user.is_authenticated %}
+            Welcome, {{ user.username }}.
+          {%else%}
+            Welcome.
+          {% endif %} 
+          {% for book in books %}
+            <button class="accordion">Currently borrowed books:</button>  
+    <!---        <div class="panel">  -->  
+              <table class="borrowed-books">    
+                <tr>
+                  <th>Title</th>               
+                  <td>{{ book.title }}</td>
+                </tr>
+                <tr>
+                  <th>Author</th>               
+                  <td>{{ book.author }}</td>  
+                </tr>  
+          
+              </table>
+      <!---       </div>      -->        
+          {% endfor %}  
             <button class="accordion">History of rentals:</button>
               <div class="panel">
                 <p>You are off to a good start, but you have no history of rentals in our library.</p>
@@ -63,4 +56,5 @@
               </div>  
           
          </div> 
+       </section>
   {% endblock %}
