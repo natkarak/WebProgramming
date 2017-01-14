@@ -1,5 +1,15 @@
 {% extends "GfLib/base.html" %}
   {% block main %}
+       <aside>
+          <p>
+            Are you looking for some of these all time best selling books?
+          </p>
+          <p>1. <span>Don Quixote </span><br />(500 million copies sold) <br />by Miguel de Cervantes</p>
+          <p>2. <span>A Tale of Two Cities </span><br />(200 million copies sold) <br />by Charles Dickens</p>
+          <p>3. <span>The Lord of the Rings </span><br />(150 million copies sold) <br />by J.R.R. Tolkien</p>
+       </aside>
+
+       <section>
           <div class="search">
             <h1>Advanced search</h1>
               <form method="post" action="searchResult.html">    
@@ -10,6 +20,8 @@
                 <p><label>Publisher: <input name = "publisher:" type = "text" placeholder = "Publisher" size = "25"></label></p>
                 <p><input type = "submit" value = "Search!" /></p>
               
-              </form>    
+              </form> 
+       </section>       
+                
           </div>        
   {% endblock %}

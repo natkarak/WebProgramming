@@ -1,0 +1,11 @@
+{% extends "GfLib/base.html" %}
+  {% block main %} 
+    <section>
+      <h1>Login</h1> 
+      <form method="post" action=".">    
+      {% csrf_token %}    
+      {{ form.as_p }}    
+      <input type="submit" value="Submit" /> 
+      </form>
+    </section>   
+  {% endblock %}
