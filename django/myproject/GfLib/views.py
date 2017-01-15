@@ -8,7 +8,6 @@ from django.contrib.auth.decorators import login_required, permission_required
 import sys
 
 from .models import Book
-
 from .forms import LoginForm
 
 
@@ -40,7 +39,7 @@ def login_view(request):
 
 def logout_view(request):
 	logout(request)
-	return HttpResponseRedirect('/')
+	return HttpResponseRedirect('index')
 
 
 def dashboard(request):
@@ -52,6 +51,9 @@ def register(request):
 
 def search(request):
 	return render(request, 'GfLib/search.html')
+
+@permission_required('GfLib.addBook')
+def addBook(request)
 
 def statistics(request):
 	return render(request, 'GfLib/statistics.html')
