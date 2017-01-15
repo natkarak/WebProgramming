@@ -9,7 +9,6 @@ urlpatterns = [
 	url(r'^register/', views.register, name='register'),
 	url(r'^search/', views.search, name='search'),
 #	url(r'^searchResult/', views.searchResult, name='searchResult'),
-	url(r'^statistics/', views.statistics, name='statistics'),
 	url(r'^logout/', views.logout_view, name='logout'),
 	url(r'^login/$', views.login_view, name = 'login'),
 ]

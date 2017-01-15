@@ -6,14 +6,13 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class Book(models.Model):
-	Author = models.ForeignKey('Author')
+	Author = models.ForeignKey('Author', on_delete=models.CASCADE)
 	AddedDate = models.DateTimeField(blank=True, null=True)
 	Genre = models.CharField(max_length=100)
 	Label = models.CharField(max_length=100)
-	NPrints = models.PositiveSmallIntegerField(default = 1)
 	Publisher = models.ForeignKey('Publisher')
 	PubYear = models.PositiveSmallIntegerField(default = 0)
-	TimesBorrowed = models.PositiveIntegerField(default = 0)
+#	TimesBorrowed = models.PositiveIntegerField(default = 0)
 	Title =	models.CharField(max_length=200)
 	Status = models.CharField(max_length=10)
 
