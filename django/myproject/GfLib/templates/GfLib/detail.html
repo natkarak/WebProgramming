@@ -1,0 +1,11 @@
+{% extends "GfLib/base.html" %}
+  {% block main %} 
+    <section>
+      <h1>{{ book.title }}</h1> 
+      <p>{{ book.author }}</p>
+      <p>{{ book.free }}</p>
+      <p>{{ book.publisher }}</p>
+      <p>{{ book.pubYear }}</p>
+      <p>{{ book.genre }}</p>
+    </section>   
+  {% endblock %}

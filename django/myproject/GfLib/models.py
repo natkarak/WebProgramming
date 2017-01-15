@@ -6,34 +6,33 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class Book(models.Model):
-	Author = models.ForeignKey('Author', on_delete=models.CASCADE)
-	AddedDate = models.DateTimeField(blank=True, null=True)
-	Genre = models.CharField(max_length=100)
-	Label = models.CharField(max_length=100)
-	Publisher = models.ForeignKey('Publisher')
-	PubYear = models.PositiveSmallIntegerField(default = 0)
-#	TimesBorrowed = models.PositiveIntegerField(default = 0)
-	Title =	models.CharField(max_length=200)
-	Status = models.CharField(max_length=10)
+	title =	models.CharField(max_length=200)
+	author = models.ForeignKey('Author', on_delete=models.CASCADE)
+	free = models.BooleanField(default=True)
+	addedDate = models.DateTimeField(blank=True, null=True)
+	genre = models.CharField(max_length=100)
+	label = models.CharField(max_length=100)
+	publisher = models.ForeignKey('Publisher')
+	pubYear = models.PositiveSmallIntegerField(default = 0)
 
 	def publish(self):
-		self.AddedDate = timezone.now()
+		self.addedDate = timezone.now()
 		self.save()
 
 	def __str__(self):
-		return self.Title
+		return self.title
 
 class Author(models.Model):
-	Name = models.CharField(max_length=100)
-	Surname = models.CharField(max_length=100)
+	name = models.CharField(max_length=100)
+	surname = models.CharField(max_length=100)
 	
 	def __str__(self):
-		return self.Surname 
+		return self.surname 
 
 class Publisher(models.Model):
-	Name = models.CharField(max_length=150)
-	Country = models.CharField(max_length=100)
+	name = models.CharField(max_length=150)
+	country = models.CharField(max_length=100)
 
 	def __str__(self):
-		return self.Name
+		return self.name
 

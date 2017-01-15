@@ -8,7 +8,7 @@ from django.contrib.auth.decorators import login_required, permission_required
 import sys
 
 from .models import Book
-from .forms import LoginForm
+from .forms import LoginForm, SearchForm
 
 
 
@@ -39,7 +39,7 @@ def login_view(request):
 
 def logout_view(request):
 	logout(request)
-	return HttpResponseRedirect('index')
+	return HttpResponseRedirect('/')
 
 
 def dashboard(request):
@@ -50,10 +50,22 @@ def register(request):
 	return render(request, 'GfLib/register.html')
 
 def search(request):
-	return render(request, 'GfLib/search.html')
+	form = SearchForm()
+	return render(request, 'GfLib/search.html', {'form': form})
 
-@permission_required('GfLib.addBook')
-def addBook(request)
+def searchBook(request):
+	form = SearchForm(request.get)
+	return HttpResponseRedirect('/')
 
-def statistics(request):
-	return render(request, 'GfLib/statistics.html')
+#@permission_required('GfLib.addBook')
+#def addBook(request)
+
+def searchResult(request):
+	return render(request, 'GfLib/searchResult.html')
+
+def detail(request, book_id):
+	context = {'book': book}
+
+	book = Book.objects.get(pk=book_id)
+	context['book'] = book
+	return render(request, 'detail.html', context)
