@@ -5,16 +5,18 @@
         <h1>Dashboard</h1>
           {% if user.is_authenticated %}
             Welcome, {{ user.username }}.
-          {%else%}
-            Welcome.
-          {% endif %} 
+          
           {% for book in books %}
             <button class="accordion">Currently borrowed books:</button>  
     <!---        <div class="panel">  -->  
               <table class="borrowed-books">    
                 <tr>
                   <th>Title</th>               
-                  <td>{{ book.title }}</td>
+                  <td>
+                    <a href="/{{ book.id }}/">
+                    {{ book.title }}
+                    </a>
+                  </td>
                 </tr>
                 <tr>
                   <th>Author</th>               
@@ -54,7 +56,9 @@
                   </tr>
                 </table>
               </div>  
-          
+          {%else%}
+            Sorry, you need to login to view this page.
+          {% endif %}
          </div> 
        </section>
   {% endblock %}
