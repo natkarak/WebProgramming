@@ -1,17 +1,18 @@
 {% extends "GfLib/base.html" %}
+{% load i18n %}
   {% block main %}
     <section> 
       <div class="dashboard">
-        <h1>Dashboard</h1>
+        <h1>{% trans "Dashboard" %}</h1>
           {% if user.is_authenticated %}
-            Welcome, {{ user.username }}.
+            {% blocktrans with user=user.username %}Welcome, {{ user }}.{% endblocktrans %}
           
           {% for book in books %}
             <button class="accordion">Currently borrowed books:</button>  
     <!---        <div class="panel">  -->  
               <table class="borrowed-books">    
                 <tr>
-                  <th>Title</th>               
+                  <th>{% trans "Title" %}</th>               
                   <td>
                     <a href="/{{ book.id }}/">
                     {{ book.title }}
@@ -19,7 +20,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <th>Author</th>               
+                  <th>{% trans "Author" %}</th>               
                   <td>{{ book.author }}</td>  
                 </tr>  
           
@@ -28,7 +29,7 @@
           {% endfor %}  
             <button class="accordion">History of rentals:</button>
               <div class="panel">
-                <p>You are off to a good start, but you have no history of rentals in our library.</p>
+                <p>{% blocktrans %}You are off to a good start, but you have no history of rentals in our library.{% endblocktrans %}</p>
               </div>
             
             <button class="accordion">Personal info:</button>
@@ -57,7 +58,7 @@
                 </table>
               </div>  
           {%else%}
-            Sorry, you need to login to view this page.
+            {% blocktrans %}Sorry, you need to login to view this page.{% endblocktrans %}
           {% endif %}
          </div> 
        </section>

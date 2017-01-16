@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.urls import reverse
+from django.utils.translation import activate
 
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required, permission_required
@@ -10,9 +11,8 @@ import sys
 from .models import Book
 from .forms import LoginForm, SearchForm
 
-
-
 # Create your views here.
+app_name='GfLib'
 
 def index(request):
 	return render(request, 'GfLib/index.html')
@@ -46,9 +46,6 @@ def dashboard(request):
 	books = Book.objects.all()
 	return render(request, 'GfLib/dashboard.html', {'books' : books})
 
-def register(request):
-	return render(request, 'GfLib/register.html')
-
 def search(request):
 	form = SearchForm()
 	return render(request, 'GfLib/search.html', {'form': form})
@@ -69,3 +66,6 @@ def detail(request, book_id):
 	book = Book.objects.get(pk=book_id)
 	context['book'] = book
 	return render(request, 'detail.html', context)
+
+def register(request):
+	return render(request, 'GfLib/register.html')

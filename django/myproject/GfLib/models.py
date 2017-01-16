@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class Book(models.Model):
+	"""One book"""
 	title =	models.CharField(max_length=200)
 	author = models.ForeignKey('Author', on_delete=models.CASCADE)
 	free = models.BooleanField(default=True)
@@ -23,6 +24,7 @@ class Book(models.Model):
 		return self.title
 
 class Author(models.Model):
+	"""Author if the book"""
 	name = models.CharField(max_length=100)
 	surname = models.CharField(max_length=100)
 	
@@ -30,6 +32,7 @@ class Author(models.Model):
 		return self.surname 
 
 class Publisher(models.Model):
+	"""Publisher - the company that printed the book"""
 	name = models.CharField(max_length=150)
 	country = models.CharField(max_length=100)
 

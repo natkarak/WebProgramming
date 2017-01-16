@@ -1,6 +1,7 @@
 {% load static %}
+{% load i18n %}
 <!DOCTYPE html>       
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8">
     <title>Genovefa's library</title>
@@ -21,14 +22,21 @@
           
           <a href="/"><img src="{% static 'GfLib/images/logo_medium.png' %}" alt="Logo of the company"></a>
           <div class="headerLeft">
+          
 
           {% if user.is_authenticated %}
-            You are logged in as {{ user.username }}.
-             <a href="{% url 'logout' %}" class="button"> Logout </a>
-            
+            {% blocktrans with user=user.username %}You are logged in as {{ user }}.{% endblocktrans %}
+             <a href="{% url 'logout' %}" class="button"> Logout </a> 
           {% else %}
              <a href="{% url 'login' %}" class="button"> Login </a>
-          {% endif %}     
+          {% endif %}
+          {% get_available_languages as languages %}
+        
+          {% for lang_code, lang_name in languages %}
+            {% language lang_code %}
+              <a href="{% url 'index' %}">{{ lang_name }}</a>
+            {% endlanguage %}
+          {% endfor %}     
          <!--     <div id="logSec" class="modal">
                 <form class="modal-content animate" action="action_page.php">
                   <div class="container">   
@@ -51,21 +59,17 @@
       <!-- navigation -->
       <nav>                                        
           <ul class="topnav" id="myTopnav">
-            <li class='active'><a href={% url 'index' %}><span>Home</span></a></li>           
-            <li class='last'><a href={% url 'search' %}><span>Search</span></a></li>
-            <li class='last'><a href={% url 'dashboard' %}><span>Dashboard</span></a></li>
+            <li class='active'><a href={% url 'index' %}><span>{% trans "Home" context "nav menu" %}</span></a></li>           
+            <li class='last'><a href={% url 'search' %}><span>{% trans "Search" context "nav menu" %}</span></a></li>
+            <li class='last'><a href={% url 'dashboard' %}><span>{% trans "Dashboard" context "nav menu" %}</span></a></li>
             <li class="icon"><a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a></li>
           </ul>  
       </nav> 
       
       <!-- content -->
       <div class="main">
-        
          {% block main %}
-         
-         {% endblock %} 
-        
-        
+         {% endblock %}         
       </div>
       
       <!-- footer -->
