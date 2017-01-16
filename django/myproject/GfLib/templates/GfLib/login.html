@@ -1,7 +1,8 @@
 {% extends "GfLib/base.html" %}
+{% load i18n %}
   {% block main %} 
     <section>
-      <h1>Login</h1> 
+      <h1>{% trans "Login" %}</h1> 
       <form method="post" action=".">    
       {% csrf_token %}    
       {{ form.as_p }}    

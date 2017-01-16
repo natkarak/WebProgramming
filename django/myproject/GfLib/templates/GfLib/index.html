@@ -1,24 +1,26 @@
-{% extends "GfLib/base.html" %}                          
+{% extends "GfLib/base.html" %}  
+{% load i18n %}                        
         
   {% block main %}
     <aside>
-      <p>
+      <p>{% blocktrans %}
       HEEEY boooks are amazing!!! <br />
       Music is super awesome, but not the same time as reading (it doesn't make much sense :D), or? <br />  
       And the forever concerning question: paper/ hardcover books or the electronic books? 
-      </p>
+      {% endblocktrans %}</p>
       <iframe src="https://www.youtube.com/embed/xqMozc4K4pg"  allowfullscreen></iframe>
     </aside>
     <section>
           <div class="welcome">   
-            <h1>Welcome to Genovefa’s online library!</h1>
+            <h1>{% trans "Welcome to Genovefa’s online library!" %}</h1>
                   
-            <p>This page was created to keep track of every single one of the books from Genovefa’s large and beautiful collection of books. 
+            <p>{% blocktrans %}This page was created to keep track of every single one of the books from Genovefa’s large and beautiful collection of books. 
             Obviously the collection is growing every year by shelves, so it is impossible to keep track of borrowed books in paper agenda 
             (also it is much more stylish to have a web application :D ).
-            If you would like to borrow books and see some other „library-related“ stuff, please <br>
-            <a href={% url 'register' %} class="button"> REGISTER </a> , <br> 
-            Or if you want to just check if we have your favourite book you can <a href={% url 'search' %} class="button">SEARCH</a> without registration.  </p>
+            If you would like to borrow books and see some other „library-related“ stuff, please {% endblocktrans %}<br>
+            <a href={% url 'register' %} class="button">{% trans "REGISTER" %}</a> , <br> 
+            {% blocktrans %}Or if you want to just check if we have your favourite book you can{% endblocktrans %} 
+            <a href={% url 'search' %} class="button">{% trans "SEARCH" %}</a> {% blocktrans %}without registration. {% endblocktrans %}</p>
           </div>
     </section>       
   {% endblock %}

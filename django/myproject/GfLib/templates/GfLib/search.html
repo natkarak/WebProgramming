@@ -1,8 +1,9 @@
 {% extends "GfLib/base.html" %}
+{% load i18n %}
   {% block main %}
        <aside>
           <p>
-            Are you looking for some of these all time best selling books?
+            {% blocktrans %}Are you looking for some of these all time best selling books?{% endblocktrans %}
           </p>
           <p>1. <span>Don Quixote </span><br />(500 million copies sold) <br />by Miguel de Cervantes</p>
           <p>2. <span>A Tale of Two Cities </span><br />(200 million copies sold) <br />by Charles Dickens</p>
@@ -11,8 +12,8 @@
 
        <section>
           <div class="search">
-            <h1>Search</h1>
-              <form action=""method="get">    
+            <h1>{% trans "Search" %}</h1>
+              <form action=""method="post">    
                 {{ form.as_p}}       
                 <p><input type = "submit" value = "Search!" /></p>
               </form> 
