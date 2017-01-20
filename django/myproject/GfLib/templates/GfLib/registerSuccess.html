@@ -1,0 +1,16 @@
+{% extends "GfLib/base.html" %}
+{% load i18n %}
+
+  
+  {% block main %}       
+      <section>         
+         <div class="registration"> 
+          <h1>{% trans "Registration" %}</h1>
+          
+          <p>{% blocktrans %}You are successfully registered.
+          {% endblocktrans %}</p>
+          
+          
+         </div>
+      </section>   
+  {% endblock %}

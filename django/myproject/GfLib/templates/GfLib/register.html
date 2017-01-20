@@ -8,9 +8,8 @@
           <h1>{% trans "Registration" %}</h1>
           
           <p>{% blocktrans %} It is fast and free. </p>
-          The fields with * are required.
           {% endblocktrans %}</p>
-          <form method = "POST" action=>
+          <form method = "POST">
             {% csrf_token %}    
             {{ form.as_p }} 
             <input type = "submit" value = "Submit" />
