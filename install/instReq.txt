@@ -1,0 +1,2 @@
+The application needs to have installed Python and the python framework Django.
+It is run in an virtual environment called "myproject". The actual application is called GfLib and the project under which it runs is GfLibrary. GfLib is using a SQL database.
