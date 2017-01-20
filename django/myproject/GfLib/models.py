@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class Book(models.Model):
-	"""One book"""
+	"""Class representing a book- one instance of the class would be one physical copy of the book stored in the library database."""
 	title =	models.CharField(max_length=200)
 	author = models.ForeignKey('Author', on_delete=models.CASCADE)
 	free = models.BooleanField(default=True)
@@ -21,21 +21,24 @@ class Book(models.Model):
 		self.save()
 
 	def __str__(self):
+		"""A function inside the class Book, to show the title of the book"""
 		return self.title
 
 class Author(models.Model):
-	"""Author if the book"""
+	"""A class representing all the authors, whose books are in the library."""
 	name = models.CharField(max_length=100)
 	surname = models.CharField(max_length=100)
 	
 	def __str__(self):
+		"""A function inside the class Author, to show the surname of the author"""
 		return self.surname 
 
 class Publisher(models.Model):
-	"""Publisher - the company that printed the book"""
+	"""A class representing a publisher. So here are saved all the names of companies that published at least one of the books in the library."""
 	name = models.CharField(max_length=150)
 	country = models.CharField(max_length=100)
 
 	def __str__(self):
+		"""A function inside the class Publisher, to show the name of the publisher"""
 		return self.name
 
